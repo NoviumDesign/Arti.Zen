@@ -1,0 +1,49 @@
+@import "compass/typography/lists/horizontal-list"
+@import "compass/typography/lists/bullets"
+
+header
+  height: 1000px
+  .logo
+    margin: 0 auto
+    display: block
+
+nav ul
+  @include horizontal-list-container()
+  text-align: center
+  > li
+    @include no-bullet()
+    display: inline
+    margin-right: 20px
+nav ul.main-menu,
+nav ul.mobilenav
+  display: none
+.nav-logo
+  display: none
+
+nav.fixed-nav
+  position: fixed
+  top: 0
+  width: 100%
+  background: rgba(0, 0, 0, 0.85)
+  border-bottom: 1px solid #363532
+  color: #FFFFFF
+  padding: 15px 0
+  z-index: 9999
+  ul.mobilenav
+    text-align: right
+    padding-top: 5px
+    display: block
+  ul.main-menu
+    display: none
+    margin-top: 15px
+    li
+      display: block
+      padding: 5px 0
+
+  .nav-logo
+    display: block
+    width: 150px
+    float: left
+
+.open
+  display: block!important
