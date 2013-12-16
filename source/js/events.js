@@ -24,7 +24,6 @@ $('#menu-toggle').click(function ()
 });
 
 
-// scroll
 $(window).mousewheel($.debounce(60, true, function (event)
 {
   event.preventDefault();
@@ -35,6 +34,10 @@ $(window).mousewheel($.debounce(60, true, function (event)
   if (event.deltaY)
   {
     flip_page(event.deltaY);
+
+    // nav
+    // need to be same time as transition
+    setTimeout(fix_nav, 800);
   }
 
 }));

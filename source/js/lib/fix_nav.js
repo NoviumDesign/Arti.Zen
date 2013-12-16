@@ -1,19 +1,17 @@
 var fix_nav = function ()
 {
-  var nav, scrollamount;
+  var nav, scrollamount, b_o_t;
 
   nav = $('nav');
   scrollamount = 350;
+  b_o_t = $('body').offset().top;
 
-  $(window).scroll(function ()
+  if (-b_o_t > scrollamount)
   {
-    if ($(this).scrollTop() > scrollamount)
-    {
-      nav.addClass('fixed-nav');
-    }
-    else
-    {
-      nav.removeClass('fixed-nav');
-    }
-  });
+    nav.addClass('fixed-nav');
+  }
+  else
+  {
+    nav.removeClass('fixed-nav');
+  }
 }
