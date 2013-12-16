@@ -1,6 +1,7 @@
 //= require_tree ./vendor
 @import "susy"
 @import "lib/common"
+@import "grid/gridsettings"
 @import "shared/layout"
 @import "views/intro"
 @import "views/header"
@@ -24,3 +25,9 @@ body
   section 
     min-width: 100%
     min-height: 100%
+
+*
+  -webkit-backface-visibility: hidden
+  -webkit-perspective: 1000
+  backface-visibility: hidden
+  perspective: 1000

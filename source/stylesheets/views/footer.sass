@@ -1,6 +1,14 @@
-ul
-  @include horizontal-list-container()
-  text-align: center
-  > li
-    @include no-bullet()
+section.footer
+  background: #000000
+  color: #FFFFFF
+  padding: 40px
+  ul
+    @include horizontal-list-container()
+    text-align: center
+    > li
+      @include no-bullet()
+      display: block
+  img
     display: block
+    max-width: 200px
+    margin: 0 auto

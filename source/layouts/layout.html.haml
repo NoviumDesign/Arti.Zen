@@ -33,6 +33,9 @@
     
     -# Stylesheets
     = stylesheet_link_tag 'application'
+    %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
+    %link(href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css")
+
   %body{class: current_page.data.body_class || 'page'}
     = yield
     -# Javascripts
