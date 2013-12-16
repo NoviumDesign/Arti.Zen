@@ -1,2 +1,29 @@
 section.stores
   background: url("/img/background-desktop.jpg") no-repeat bottom
+  padding: 20px 0
+  a
+    @include span-columns(3,6)
+    @include nth-omega(2n)
+    @include clearfix()
+    background: #000000
+    color: #FFFFFF
+    text-align: center
+    margin: 10px 0
+    position: relative
+    -webkit-box-shadow: 3px 3px 3px #777
+    -moz-box-shadow: 3px 3px 3px #777
+    box-shadow: 3px 3px 3px #777
+    padding-bottom: columns(3,6)
+    @include at-breakpoint($tablet)
+      padding-bottom: columns(2,8)
+    div
+      position: absolute
+      width: 100%
+      padding: 15px
+    img
+      display: block
+      margin: 0 auto
+    @include at-breakpoint($tablet)
+      @include span-columns(2,8)
+      @include remove-nth-omega(2n)
+      @include nth-omega(4n)
