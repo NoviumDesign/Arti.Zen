@@ -16,87 +16,100 @@ body_class: index
             %a#menu-toggle Meny
         %ul.main-menu
           %li
-            %a Vår vison
+            %a{href: "#concept"} Vår vison
           %li
-            %a Galleri
+            %a{href: "#gallery"} Galleri
           %li
-            %a Butiker & öppettider
+            %a{href: "#stores"} Butiker & öppettider
   .arrow-holder
-    .arrow
+    %a.arrow{href: "#concept"}
 
-%section.concept
+%section.concept#concept
+  %p 
+    Our mission is to create the leading franchised chain of trendy stores specializing in quality well designed gift, stationery & frame products across Sweden and the Nordic countries. Positioned above Gallerix and Ahlens. Provides a touch of luxury for our customers which they can afford. They will immediately think of Arti.Zen when they need to get a gift, cards, school and stationery products and of course frames. (Our self owned stores are prototypes to generate more franchisee sign ups and crystalized our concepts for future landlords.) Basically, we need to be market leaders in concept, customer (store) experience and product mix - so that landlords and cus- tomers want us, and not the other way around.
+  .arrow-holder
+    %a.arrow.white{href: "#gallery"}
+%section.gallery#gallery
   .container
-    %p 
-      Our mission is to create the leading franchised chain of trendy stores specializing in quality well designed gift, stationery & frame products across Sweden and the Nordic countries. Positioned above Gallerix and Ahlens. Provides a touch of luxury for our customers which they can afford. They will immediately think of Arti.Zen when they need to get a gift, cards, school and stationery products and of course frames. (Our self owned stores are prototypes to generate more franchisee sign ups and crystalized our concepts for future landlords.) Basically, we need to be market leaders in concept, customer (store) experience and product mix - so that landlords and cus- tomers want us, and not the other way around.
-%section.gallery
-  .container
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Premium frames
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p TunaPark store
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Premium frames
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p TunaPark store
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Premium frames
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p TunaPark store
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Gränden Concept Store
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Premium frames
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p TunaPark store
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
+      %p Premium frames
     %div.item
       %img{src: "/img/canvas.jpg"}
-      %p Lkpg store
-%section.stores
+      %p Gränden Concept Store
+%section.stores#stores
   .container
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Stenungsund
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Ikano
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Jönköping
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Väla
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Helsingborg
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Eurostop
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen Eskilstuna City
     %a{href: "#"}
       %div
         %img{src: "/img/logo-white.svg"}
-        %p Gränden linköping
+        %p ArtiZen TunaPark
+    %a{href: "#"}
+      %div
+        %img{src: "/img/logo-white.svg"}
+        %p ArtiZen Norrköping
+    %a{href: "#"}
+      %div
+        %img{src: "/img/logo-white.svg"}
+        %p ArtiZen Gränden
+    %a{href: "#"}
+      %div
+        %img{src: "/img/logo-white.svg"}
+        %p ArtiZen Huddinge
 
 %section.footer
   %footer
@@ -109,14 +122,18 @@ body_class: index
 .popwrap.hide
   .popup
     .popinner
-      %img.logo{src: "/img/logo-white.svg"}
-      %p Gränden Linköping
-      %p
-        %span 013 - 10 08 68
-        %span granden@artizen.se
-      %p
-        %span Nygatan 22
-        %span 582 19 Linköping
-      %img.map{src: "http://maps.googleapis.com/maps/api/staticmap?center=58.411497,15.612941&zoom=16&format=png&sensor=false&size=640x480&maptype=roadmap&visual_refresh=true&style=visibility:on|saturation:-100|gamma:0.73|lightness:46"}
+      .text
+        %img.logo{src: "/img/logo-white.svg"}
+          %span Gränden Linköping
+          %span Nygatan 22
+          %span 582 19 Linköping
+          %span granden@artizen.se
+          %span 013 - 10 08 68
+      .map
+        %img{src: "http://maps.googleapis.com/maps/api/staticmap?center=58.411497,15.612941&zoom=16&format=png&sensor=false&size=640x480&maptype=roadmap&visual_refresh=true&style=visibility:on|saturation:-100|gamma:0.73|lightness:46"}
 
-
+.sectionmarker
+  %div.active
+  %div
+  %div
+  %div

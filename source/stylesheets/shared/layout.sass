@@ -1,30 +1,35 @@
 .popup
   height: 80% /* Set your own height: percents, ems, whatever! */
-  width: 95% /* Set your own width: percents, ems, whatever! */
+  width: 90% /* Set your own width: percents, ems, whatever! */
   overflow: auto /* Recommended in case content is larger than the container */
   margin: auto /* Center the item vertically & horizontally */
   position: absolute /* Break it out of the regular flow */
-  padding: 20px
   top: 0
   left: 0
   bottom: 0
   right: 0 /* Set the bounds in which to center it, relative to its parent/container */
   background: #000000
-  border: 1px solid #FFFFFF
-  z-index: 9000
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  z-index: 9999
   color: #FFFFFF
-  text-align: center
-  @include at-breakpoint($desktop)
-    text-align: left
-    padding: 50px
+  .text
+    width: 100%
+    padding: 20px
+    text-align: center
+    @include at-breakpoint($desktop)
+      @include span-columns(4,12)
+      padding: 50px
+      text-align: left
   img.logo
     max-width: 220px
-    display: block
-    margin: 0 auto 20px auto
+    display: inline
+    margin-bottom: 7px
+  .map
+    display: none
+    text-align: right
     @include at-breakpoint($desktop)
-      margin: 0 0 20px 0
-  img.map
-    float: right
+      display: block
+      @include span-columns(8 omega,12)
   span
     display: block
   span.cross
@@ -48,4 +53,41 @@
   right: 0
   background: #000
   background: rgba(0, 0, 0, 0.85)
-  z-index: 3
+  z-index: 9998
+
+.sectionmarker
+  display: none
+  position: fixed
+  top: 50%
+  right: 30px
+  height: 200px
+  width: 10px
+  margin-top: -100px
+  @include at-breakpoint($tablet)
+    display: block
+  div
+    content: " "
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    display: block
+    background: rgba(0, 0, 0, 0.7)
+    margin-bottom: 6px
+    &.active
+      background: rgba(255, 255, 255, 0.7)
+.arrow-holder
+  position: absolute
+  bottom: 0
+  width: 100%
+  padding: 20px 0 50px 0
+.arrow
+  background: url("/img/arrow-down.svg") no-repeat top
+  width: 70px
+  height: 45px
+  display: block
+  margin: 0 auto
+  opacity: 0.30
+.arrow.white
+  background: url("/img/arrow-down-white.svg") no-repeat top
+  opacity: 0.5
+

@@ -1,6 +1,9 @@
 section.gallery
   padding: 100px 0
-  background: url("/img/bricks.jpg") no-repeat bottom 
+  background: url("/img/bricks.jpg") no-repeat bottom
+  @include at-breakpoint($tablet)
+    padding-left: 80px
+    padding-right: 80px
   .item
     @include span-columns(3,6)
     @include nth-omega(2n)
@@ -8,9 +11,6 @@ section.gallery
     background: #FFFFFF
     margin: 10px 0
     position: relative
-    -webkit-box-shadow: 3px 3px 3px #777
-    -moz-box-shadow: 3px 3px 3px #777
-    box-shadow: 3px 3px 3px #777
     img
       border: 10px solid #fff
       border-bottom: 45px solid #fff
@@ -18,14 +18,16 @@ section.gallery
       position: absolute
       text-align: center
       width: 100%
-      bottom: 8px
-      font: 400 18px/1 'Kaushan Script', cursive
-      color: #888
-    @include at-breakpoint($tablet)
+      bottom: 3px
+      font-size: 28px
+      text-transform: capitalize
+      font-family: manonegraregular
+      color: #8F8F8F
+    @include at-breakpoint($desktop)
       @include span-columns(4,12)
       @include remove-nth-omega(2n)
       @include nth-omega(3n)
-    @include at-breakpoint($desktop)
+    @include at-breakpoint($huge)
       @include span-columns(3,12)
       @include remove-nth-omega(3n)
       @include nth-omega(4n)

@@ -20,7 +20,7 @@ $container-style: fluid
 // Define breakpoints, in this case when there's room fora the specified columns.
 $tablet: 768px 12
 $desktop: 1000px 12
-$huge:    24
+$huge: 1200px 12
 
 .container
   // Include `container` if this element will contain a grid system.
@@ -29,6 +29,9 @@ $huge:    24
   @include susy-grid-background
   // Float left
   @include susy-grid-background
+  @include at-breakpoint($tablet)
+    padding-left: 25px
+    padding-right: 25px
 
 // Automatically reset the grid width & re-apply the grid background
 // to responsive layouts.

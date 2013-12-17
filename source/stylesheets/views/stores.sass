@@ -1,6 +1,9 @@
 section.stores
   background: url("/img/background-desktop.jpg") no-repeat bottom
   padding: 100px 0
+  @include at-breakpoint($tablet)
+    padding-left: 80px
+    padding-right: 80px
   a
     @include span-columns(3,6)
     @include nth-omega(2n)
@@ -10,31 +13,35 @@ section.stores
     text-align: center
     margin: 10px 0
     position: relative
-    -webkit-box-shadow: 3px 3px 3px #777
-    -moz-box-shadow: 3px 3px 3px #777
-    box-shadow: 3px 3px 3px #777
     padding-bottom: columns(3,6)
-    @include at-breakpoint($tablet)
-      padding-bottom: columns(4,12)
     @include at-breakpoint($desktop)
+      @include span-columns(4,12)
+      @include remove-nth-omega(2n)
+      @include nth-omega(3n)
+      padding-bottom: columns(4,12)
+    @include at-breakpoint($huge)
+      @include span-columns(3,12)
+      @include remove-nth-omega(3n)
+      @include nth-omega(4n)
       padding-bottom: columns(3,12)
     div
       position: absolute
       width: 100%
-      padding: 15px
+      margin: auto auto
+      display: table
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      padding: 0 10px
+      text-align: center
+      text-transform: capitalize
+      font-size: 20px
+      @include clearfix()
+      @include at-breakpoint($tablet)
+        padding: 0 20px
     img
       display: block
       margin: 0 auto
-      margin-bottom: 6px
-      @include at-breakpoint($tablet)
-        margin-top: 25px
-      @include at-breakpoint($desktop)
-        margin-top: 70px
-    @include at-breakpoint($tablet)
-      @include span-columns(4,12)
-      @include remove-nth-omega(2n)
-      @include nth-omega(3n)
-    @include at-breakpoint($desktop)
-      @include span-columns(3,12)
-      @include remove-nth-omega(3n)
-      @include nth-omega(4n)
+      margin-bottom: 11px
