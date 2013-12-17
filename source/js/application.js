@@ -6,9 +6,8 @@
 #= require_tree ./lib
 #= require events
 
-
-
-
+// animation tim for page to flip
+var anim = 800;
 
 
 

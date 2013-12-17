@@ -6,14 +6,23 @@ $('document').ready(function ($)
 
   // set window height to body
   w_h();
+
+  // set section id on body
+  body_id();
 });
 
 
 // rezise browser
 $(window).resize(function()
 {
+  // fix nav on scroll
+  fix_nav();
+
   // set window height to body
   w_h();
+
+  // set section id on body
+  body_id();
 });
 
 
@@ -23,47 +32,33 @@ $('#menu-toggle').click(function ()
   $('.main-menu').toggleClass('open');
 });
 
-
+// scroll
 $(window).mousewheel($.debounce(60, true, function (event)
 {
   event.preventDefault();
-
-  console.log(1)
 
   // up or down
   if (event.deltaY)
   {
     flip_page(event.deltaY);
-
-    // nav
-    // need to be same time as transition
-    setTimeout(fix_nav, 800);
   }
-
 }));
 
 
+$(document).keydown(function (event)
+{
+  var k = event.which;
 
-
-// touch scroll
-// var s_t = 0;
-// $('body').bind('scrollstop', function (event)
-// {
-
-//   // up or down
-//   if ($(window).scrollTop() - s_t > 0)
-//   {
-//     console.log(-1)
-//     flip_page(-1);
-//   }
-//   else if ($(window).scrollTop() - s_t < 0)
-//   {
-//     console.log(1)
-//     flip_page(1);
-//   }
-
-//   event.preventDefault();
-
-//   s_t = $(window).scrollTop()
-
-// });
+  if (k == '40')
+  {
+    // down
+    event.preventDefault();
+    flip_page(-1);
+  }
+  else if (k == '38')
+  {
+    // up
+    event.preventDefault();
+    flip_page(1);
+  }
+});
