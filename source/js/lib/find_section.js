@@ -1,22 +1,28 @@
 var find_section = function ()
 {
-  var sections, w_h, section;
+  var sections, section_bottom, section_top;
 
-  sections = $('body > section');
-  w_h = $(window).height();
+  sections = $('.section_holder > section, .section_holder > .section');
 
   sections.each(function (i, val)
   {
-    var offsetBottom = val.offsetTop + val.offsetHeight;
+    var offset_top = val.offsetTop;
 
-    // first section with visible "bottom"
-    if (offsetBottom >= 1)
+    // finner den översta sektionen som syns på skärmen vilken är intressant när man scrollar nedåt
+    if (offset_top <= 0)
     {
-      section = val;
+      section_top = val;
+    }
 
+    // finner den nedersta sektionen som syns på skärmen vilken är intressant när man scrollar uppåt
+    if (offset_top >= $(window).height())
+    {
+      // har funnit bägge sektionerna, avbryt iteration nu innan nytt värde tilldelas
       return false;
     }
+    section_bottom = val;
+
   });
 
-  return section;
+  return Array(section_top, section_bottom);
 }

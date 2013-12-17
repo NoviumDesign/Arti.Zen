@@ -2,34 +2,34 @@
 title: Arti.Zen
 body_class: index
 ---
-
-%section.intro
-  %header
-    .container
-      .logowrapper
-        %img.logo{src: "/img/logo-black.svg"}
-    %nav
+.section_holder
+  %section.intro.h100
+    %header
       .container
-        %img.nav-logo{src: "/img/logo-white.svg"}
-        %ul.mobilenav
-          %li
-            %a#menu-toggle Meny
-        %ul.main-menu
-          %li
-            %a{href: "#concept"} Vår vison
-          %li
-            %a{href: "#gallery"} Galleri
-          %li
-            %a{href: "#stores"} Butiker & öppettider
-  .arrow-holder
-    %a.arrow{href: "#concept"}
+        .logowrapper
+          %img.logo{src: "/img/logo-black.svg"}
+      %nav
+        .container
+          %img.nav-logo{src: "/img/logo-white.svg"}
+          %ul.mobilenav
+            %li
+              %a#menu-toggle Meny
+          %ul.main-menu
+            %li
+              %a{href: "#concept"} Vår vison
+            %li
+              %a{href: "#gallery"} Galleri
+            %li
+              %a{href: "#stores"} Butiker & öppettider
+    .arrow-holder
+      %a.arrow{href: "#concept"}
 
-%section.concept#concept
+%section.concept#concept.h100
   %p 
     Our mission is to create the leading franchised chain of trendy stores specializing in quality well designed gift, stationery & frame products across Sweden and the Nordic countries. Positioned above Gallerix and Ahlens. Provides a touch of luxury for our customers which they can afford. They will immediately think of Arti.Zen when they need to get a gift, cards, school and stationery products and of course frames. (Our self owned stores are prototypes to generate more franchisee sign ups and crystalized our concepts for future landlords.) Basically, we need to be market leaders in concept, customer (store) experience and product mix - so that landlords and cus- tomers want us, and not the other way around.
   .arrow-holder
     %a.arrow.white{href: "#gallery"}
-%section.gallery#gallery
+%section.gallery#gallery.mh100
   .container
     %div.item
       %img{src: "/img/canvas.jpg"}
@@ -64,7 +64,7 @@ body_class: index
     %div.item
       %img{src: "/img/canvas.jpg"}
       %p Gränden Concept Store
-%section.stores#stores
+%section.stores#stores.mh100
   .container
     %a{href: "#"}
       %div

@@ -11,20 +11,25 @@
 @import "views/footer"
 
 
-html
-  // overflow: hidden
 
 body
   height: 100%
   width: 100%
   overflow: hidden
+  
+  .section_holder
+    transition: margin 800ms ease
+    -webkit-transition: margin 800ms ease
 
-  transition: margin 800ms ease
-  -webkit-transition: margin 800ms ease
+    section
+      // -webkit-box-sizing: content-box
+      // -moz-box-sizing: content-box
+      // box-sizing: content-box
 
-  section 
-    min-width: 100%
-    min-height: 100%
+// nav
+//   -webkit-perspective: none
+//   perspective: none
+
 
 /* *
   -webkit-backface-visibility: hidden
