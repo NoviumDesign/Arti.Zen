@@ -1,6 +1,6 @@
 section.stores
   background: url("/img/background-desktop.jpg") no-repeat bottom
-  padding: 20px 0
+  padding: 100px 0
   a
     @include span-columns(3,6)
     @include nth-omega(2n)
@@ -15,7 +15,9 @@ section.stores
     box-shadow: 3px 3px 3px #777
     padding-bottom: columns(3,6)
     @include at-breakpoint($tablet)
-      padding-bottom: columns(2,8)
+      padding-bottom: columns(4,12)
+    @include at-breakpoint($desktop)
+      padding-bottom: columns(3,12)
     div
       position: absolute
       width: 100%
@@ -23,7 +25,16 @@ section.stores
     img
       display: block
       margin: 0 auto
+      margin-bottom: 6px
+      @include at-breakpoint($tablet)
+        margin-top: 25px
+      @include at-breakpoint($desktop)
+        margin-top: 70px
     @include at-breakpoint($tablet)
-      @include span-columns(2,8)
+      @include span-columns(4,12)
       @include remove-nth-omega(2n)
+      @include nth-omega(3n)
+    @include at-breakpoint($desktop)
+      @include span-columns(3,12)
+      @include remove-nth-omega(3n)
       @include nth-omega(4n)

@@ -12,5 +12,12 @@ section.concept
     bottom: 0
     left: 0
     right: 0
-    z-index: 2000
-    width: 300px
+    padding: 10px
+    text-align: center
+    @include at-breakpoint($tablet)
+      max-width: 86%
+      font-size: 26px
+      line-height: 35px
+    @include at-breakpoint($desktop)
+      max-width: 1000px
+      line-height: 36px
