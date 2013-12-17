@@ -1,0 +1,51 @@
+.popup
+  height: 80% /* Set your own height: percents, ems, whatever! */
+  width: 95% /* Set your own width: percents, ems, whatever! */
+  overflow: auto /* Recommended in case content is larger than the container */
+  margin: auto /* Center the item vertically & horizontally */
+  position: absolute /* Break it out of the regular flow */
+  padding: 20px
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0 /* Set the bounds in which to center it, relative to its parent/container */
+  background: #000000
+  border: 1px solid #FFFFFF
+  z-index: 9000
+  color: #FFFFFF
+  text-align: center
+  @include at-breakpoint($desktop)
+    text-align: left
+    padding: 50px
+  img.logo
+    max-width: 220px
+    display: block
+    margin: 0 auto 20px auto
+    @include at-breakpoint($desktop)
+      margin: 0 0 20px 0
+  img.map
+    float: right
+  span
+    display: block
+  span.cross
+    position: absolute
+    right: 0
+    top: 0
+    background: red
+.popinner
+  position: relative
+  width: 100%
+  @include clearfix()
+
+.hide
+  display: none
+
+.popwrap
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: #000
+  background: rgba(0, 0, 0, 0.85)
+  z-index: 3

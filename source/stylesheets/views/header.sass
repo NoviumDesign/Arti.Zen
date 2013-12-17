@@ -2,9 +2,21 @@
 @import "compass/typography/lists/bullets"
 
 header
-  .logo
-    margin: 0 auto
-    display: block
+  .logowrapper
+    width: 100%
+    padding: 0 20px
+    margin-left: auto
+    margin-right: auto
+    position: absolute
+    top: 34%
+    left: 0
+    text-align: center
+    .logo
+      display: inline
+      @include at-breakpoint($tablet)
+        max-width: 79%
+      @include at-breakpoint($desktop)
+        max-width: 65%
 
 nav ul
   @include horizontal-list-container()
@@ -32,12 +44,20 @@ nav.fixed-nav
     text-align: right
     padding-top: 5px
     display: block
+    @include at-breakpoint($tablet)
+      display: none
   ul.main-menu
     display: none
     margin-top: 15px
+    @include at-breakpoint($tablet)
+      display: block
+      text-align: right
+      margin-top: 4px
     li
       display: block
       padding: 5px 0
+      @include at-breakpoint($tablet)
+        display: inline
 
   .nav-logo
     display: block
