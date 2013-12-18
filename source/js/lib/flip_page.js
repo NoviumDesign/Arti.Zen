@@ -21,8 +21,8 @@ var flip_page = function (direction)
   }, anim);
 
 
-  accuracy = 10;
-  percentage = 0.5
+  accuracy = 150;
+  percentage = 0.7
 
   holder_offset = $('.section_holder').offset().top;
   sections = find_section();

@@ -9,6 +9,9 @@ $('document').ready(function ($)
 
   // set section id on body
   body_id();
+
+  h_e_w();
+  h_100p();
 });
 
 
@@ -23,6 +26,9 @@ $(window).resize(function()
 
   // set section id on body
   body_id();
+
+  h_e_w();
+  h_100p();
 });
 
 

@@ -13,34 +13,29 @@ section.stores
     text-align: center
     margin: 10px 0
     position: relative
-    padding-bottom: columns(3,6)
+    // padding-bottom: columns(3,6)
     @include at-breakpoint($desktop)
       @include span-columns(4,12)
       @include remove-nth-omega(2n)
       @include nth-omega(3n)
-      padding-bottom: columns(4,12)
+      // padding-bottom: columns(4,12)
     @include at-breakpoint($huge)
       @include span-columns(3,12)
       @include remove-nth-omega(3n)
       @include nth-omega(4n)
-      padding-bottom: columns(3,12)
-    div
-      position: absolute
+      // padding-bottom: columns(3,12)
+    .holder
       width: 100%
-      margin: auto auto
       display: table
-      position: absolute
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      padding: 0 10px
-      text-align: center
-      text-transform: capitalize
-      font-size: 20px
-      @include clearfix()
-      @include at-breakpoint($tablet)
-        padding: 0 20px
+      .storecontent
+        display: table-cell
+        padding: 0 10px
+        text-align: center
+        vertical-align: middle
+        text-transform: capitalize
+        font-size: 20px
+        @include at-breakpoint($tablet)
+          padding: 0 20px
     img
       display: block
       margin: 0 auto
