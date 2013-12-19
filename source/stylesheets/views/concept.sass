@@ -7,15 +7,17 @@ section.concept
   .textholder
     display: table
     width: 100%
+    margin-left: auto
+    margin-right: auto
+    @include at-breakpoint($tablet)
+      width: 86%
+      font-size: 26px
+      line-height: 35px
+    @include at-breakpoint($desktop)
+      width: 1000px
+      line-height: 36px
   p
     display: table-cell
     vertical-align: middle
     padding: 10px
     text-align: center
-    @include at-breakpoint($tablet)
-      max-width: 86%
-      font-size: 26px
-      line-height: 35px
-    @include at-breakpoint($desktop)
-      max-width: 1000px
-      line-height: 36px
