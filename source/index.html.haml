@@ -67,57 +67,57 @@ body_class: index
         %p Gränden Concept Store
   %section.stores#stores.mh100
     .container
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 1}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Stenungsund
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 2}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Ikano
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 3}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Jönköping
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 4}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Väla
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 5}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Helsingborg
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 6}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Eurostop
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 7}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Eskilstuna City
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 8}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen TunaPark
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 9}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Norrköping
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 10}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
             %p ArtiZen Gränden
-      %a.hew{href: "#"}
+      %a.hew.storeloader{href: "#", data: {id: 11}}
         .holder.hp100
           .storecontent
             %img{src: "/img/logo-white.svg"}
@@ -131,18 +131,22 @@ body_class: index
           %li Exempelgatan 15
           %li 583 23 Linköping
       %img{src: "/img/logo-white.svg"}
-.popwrap.hide
+
+
+#1.popwrap.hide
   .popup
     .popinner
       .text
         %img.logo{src: "/img/logo-white.svg"}
-          %span Gränden Linköping
-          %span Nygatan 22
-          %span 582 19 Linköping
-          %span granden@artizen.se
-          %span 013 - 10 08 68
-      .map
-        %img{src: "http://maps.googleapis.com/maps/api/staticmap?center=58.411497,15.612941&zoom=16&format=png&sensor=false&size=640x480&maptype=roadmap&visual_refresh=true&style=visibility:on|saturation:-100|gamma:0.73|lightness:46"}
+          %span Arti.Zen Test
+      .map{data: {lat: "", lng: "", address: "Smalagränd 5", city: "Stockholm", zip: "11139"}}
+#2.popwrap.hide
+  .popup
+    .popinner
+      .text
+        %img.logo{src: "/img/logo-white.svg"}
+          %span Arti.Zen Ikano
+      .map{data: {lat: "", lng: "", address: "Västra Svedengatan 7D", city: "Linköping", zip: "58128"}}
 
 .sectionmarker
   %div.active

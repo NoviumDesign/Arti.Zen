@@ -76,3 +76,23 @@ $(document).keydown(function (event)
     flip_page(1);
   }
 });
+
+
+// open popup
+$('.storeloader').click(function (event)
+{
+  event.preventDefault();
+
+  var id = $(this).attr('data-id');
+
+  toggle_store(id);
+});
+
+// close popup
+$('.popwrap').click(function (event)
+{
+  if ($(this)[0] == event.target)
+  {
+    $(this).addClass('hide');
+  }
+});

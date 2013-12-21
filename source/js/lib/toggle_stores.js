@@ -1,3 +1,7 @@
-$( ".stores a" ).click(function() {
-  $(".popwrap").toggleClass( "hide" );
-});
+var toggle_store = function (id)
+{
+  $(".popwrap#" + id).toggleClass( "hide" );
+
+  // show map
+  show_map(id);
+}
