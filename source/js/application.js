@@ -7,4 +7,4 @@
 #= require events
 
 // animation tim for page to flip
-var anim = 800;
+var anim = 200;
