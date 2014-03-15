@@ -1,10 +1,10 @@
 section.stores
-  background: url("/img/background-desktop.jpg") no-repeat bottom
+  background: url("/img/background-mobile.jpg") repeat-y top
   padding: 100px 0
   @include at-breakpoint($tablet)
     padding-left: 80px
     padding-right: 80px
-  a
+  .storeloader
     @include span-columns(3,6)
     @include nth-omega(2n)
     @include clearfix()
@@ -13,6 +13,7 @@ section.stores
     text-align: center
     margin: 10px 0
     position: relative
+    cursor: pointer
     // padding-bottom: columns(3,6)
     @include at-breakpoint($desktop)
       @include span-columns(4,12)
@@ -27,6 +28,7 @@ section.stores
     .holder
       width: 100%
       display: table
+      table-layout: fixed
       .storecontent
         display: table-cell
         padding: 0 10px
@@ -40,11 +42,3 @@ section.stores
       display: block
       margin: 0 auto
       margin-bottom: 11px
-
-.popwrap
-  .popinner
-    width: 100%
-    height: 100%
-    .map
-      width: 33%
-      height: 100%

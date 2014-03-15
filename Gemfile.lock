@@ -101,4 +101,4 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.0.13)
-  susy
+  susy (~> 1.0.9)

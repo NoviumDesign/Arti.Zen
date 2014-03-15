@@ -4,4 +4,4 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.0.13"
 
-gem "susy"
+gem "susy", "~>1.0.9"

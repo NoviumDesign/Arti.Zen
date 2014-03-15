@@ -21,107 +21,91 @@ body_class: index
               %a{href: "#gallery", navigate: "#gallery"} Galleri
             %li
               %a{href: "#stores", navigate: "#stores"} Butiker & öppettider
+            %li
+              %a{href: "//www.facebook.com/Arti.Zen.se", target: "_blank"}
+                %img{src: "/img/fb-logo.svg"}
+            %li
+              %a{href: "//instagram.com/artizen", target: "_blank"}
+                %img{src: "/img/insta-logo.svg"} 
     .arrow-holder
       %a.arrow{href: "#concept", navigate: "#concept"}
 
   %section.concept#concept.h100
     .textholder.hp100
       %p
-        Our mission is to create the leading franchised chain of trendy stores specializing in quality well designed gift, stationery & frame products across Sweden and the Nordic countries. Positioned above Gallerix and Ahlens. Provides a touch of luxury for our customers which they can afford. They will immediately think of Arti.Zen when they need to get a gift, cards, school and stationery products and of course frames. (Our self owned stores are prototypes to generate more franchisee sign ups and crystalized our concepts for future landlords.) Basically, we need to be market leaders in concept, customer (store) experience and product mix - so that landlords and cus- tomers want us, and not the other way around.
+        Arti.Zen. Vad är det? Det är en plats där du hittar en ramverkstad med tillhörande tavlor, ramar, kort och presenter. Vi har produkter som lätt kan kännas igen sedan innan, men som har återuppfunnits med en ny tvist. Just nu arbetar vi för att etablera vårt nya varumärke runt om i Sverige. Vi står för en hantverksmannamässig stolthet. En trendig, exklusiv men samtidigt tillgänglig nish. Våra produkter är på ett kärleksfullt sätt anpassade till dig och din upplevelse av vårt varumärke och våra butiker. Hos oss är enbart du som kund i fokus. Inget annat spelar någon roll. För du är värd det. Förvänta dig att höra mer från oss på Arti.Zen. Du kommer inte att bli besviken. Välkommen att följa med oss på vår resa.
     .arrow-holder
-      %a.arrow.white{href: "#gallery", navigate: "#gallery"}
-  %section.gallery#gallery.mh100
+      %a.arrow.white{href: "#storeselect", navigate: "#storeselect"}
+  %section.storeselect#storeselect.mh100
     .container
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Premium frames
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p TunaPark store
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Premium frames
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p TunaPark store
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Premium frames
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p TunaPark store
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Gränden Concept Store
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Premium frames
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p TunaPark store
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Premium frames
-      %div.item
-        %img{src: "/img/canvas.jpg"}
-        %p Gränden Concept Store
-  %section.stores#stores.mh100
-    .container
-      %a.hew.storeloader{href: "#", data: {id: 1}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Stenungsund
-      %a.hew.storeloader{href: "#", data: {id: 2}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Ikano
-      %a.hew.storeloader{href: "#", data: {id: 3}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Jönköping
-      %a.hew.storeloader{href: "#", data: {id: 4}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Väla
-      %a.hew.storeloader{href: "#", data: {id: 5}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Helsingborg
-      %a.hew.storeloader{href: "#", data: {id: 6}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Eurostop
-      %a.hew.storeloader{href: "#", data: {id: 7}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Eskilstuna City
-      %a.hew.storeloader{href: "#", data: {id: 8}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen TunaPark
-      %a.hew.storeloader{href: "#", data: {id: 9}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Norrköping
-      %a.hew.storeloader{href: "#", data: {id: 10}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Gränden
-      %a.hew.storeloader{href: "#", data: {id: 11}}
-        .holder.hp100
-          .storecontent
-            %img{src: "/img/logo-white.svg"}
-            %p ArtiZen Huddinge
+      .first
+        %h2 Hitta din Art.Zen butik för kontaktinformation och öppettider
+        .storesearch#storesearch
+          %span Sök:
+          %input.typeahead{placeholder: "Fyll i landskap eller butik", type: "text"}
+      .second
+        / #the-basics
+        /   %input.typeahead{placeholder: "States of USA", type: "text"}
+        %img{src: "/img/map.png"}
+
+
+  / %section.stores#stores.mh100
+  /   .container
+  /     %a.hew.storeloader{href: "#", data: {id: 1}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Stenungsund
+  /     %a.hew.storeloader{href: "#", data: {id: 2}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Ikano
+  /     %a.hew.storeloader{href: "#", data: {id: 3}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Jönköping
+  /     %a.hew.storeloader{href: "#", data: {id: 4}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Väla
+  /     %a.hew.storeloader{href: "#", data: {id: 5}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Helsingborg
+  /     %a.hew.storeloader{href: "#", data: {id: 6}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Eurostop
+  /     %a.hew.storeloader{href: "#", data: {id: 7}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Eskilstuna City
+  /     %a.hew.storeloader{href: "#", data: {id: 8}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen TunaPark
+  /     %a.hew.storeloader{href: "#", data: {id: 9}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Norrköping
+  /     %a.hew.storeloader{href: "#", data: {id: 10}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Gränden
+  /     %a.hew.storeloader{href: "#", data: {id: 11}}
+  /       .holder.hp100
+  /         .storecontent
+  /           %img{src: "/img/logo-white.svg"}
+  /           %p ArtiZen Huddinge
 
   %section.footer
     %footer
