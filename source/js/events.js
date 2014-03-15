@@ -47,16 +47,30 @@ $('[navigate]').click(function (event)
 
 
 // scroll
-$(window).mousewheel($.debounce(60, true, function (event)
+// $(window).mousewheel($.debounce(60, true, function (event)
+// {
+//   event.preventDefault();
+
+//   // up or down
+//   if (event.deltaY)
+//   {
+//     flip_page(event.deltaY);
+//   }
+// }));
+
+$(window).on('mousewheel', function (event)
 {
   event.preventDefault();
 
+  var result = gatherData(event.timeStamp, event.deltaY);
+
   // up or down
-  if (event.deltaY)
+  if (result !== 0)
   {
-    flip_page(event.deltaY);
-  }
-}));
+    console.log(result);
+    flip_page(result);
+  } 
+});
 
 
 $(document).keydown(function (event)
