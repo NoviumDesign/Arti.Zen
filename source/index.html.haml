@@ -18,14 +18,12 @@ body_class: index
             %li
               %a{href: "#concept", navigate: "#concept"} Vår vison
             %li
-              %a{href: "#gallery", navigate: "#gallery"} Galleri
-            %li
               %a{href: "#stores", navigate: "#stores"} Butiker & öppettider
             %li
               %a{href: "//www.facebook.com/Arti.Zen.se", target: "_blank"}
                 %img{src: "/img/fb-logo.svg"}
             %li
-              %a{href: "//instagram.com/artizen", target: "_blank"}
+              %a{href: "//instagram.com/artizen_sverige", target: "_blank"}
                 %img{src: "/img/insta-logo.svg"} 
     .arrow-holder
       %a.arrow{href: "#concept", navigate: "#concept"}
@@ -33,19 +31,17 @@ body_class: index
   %section.concept#concept.h100
     .textholder.hp100
       %p
-        Arti.Zen. Vad är det? Det är en plats där du hittar en ramverkstad med tillhörande tavlor, ramar, kort och presenter. Vi har produkter som lätt kan kännas igen sedan innan, men som har återuppfunnits med en ny tvist. Just nu arbetar vi för att etablera vårt nya varumärke runt om i Sverige. Vi står för en hantverksmannamässig stolthet. En trendig, exklusiv men samtidigt tillgänglig nish. Våra produkter är på ett kärleksfullt sätt anpassade till dig och din upplevelse av vårt varumärke och våra butiker. Hos oss är enbart du som kund i fokus. Inget annat spelar någon roll. För du är värd det. Förvänta dig att höra mer från oss på Arti.Zen. Du kommer inte att bli besviken. Välkommen att följa med oss på vår resa.
+        Arti.Zen är en butik där du hittar en ramverkstad, ett brett utbud av ramar, tavlor kort och presenter. Arti.Zens styrka ligger i att vi har lång erfarenhet inom branschen och är väldigt duktiga på kvalitetsinramning. Därav namnet Arti.Zen där Arti kommer från ordet Artisan som betyder skicklig och stolt hantverkare med lång erfarenhet inom sitt område samt en som alltid strävar efter att bli bättre. Zen är ett Japanskt ord som betyder känsla, vi strävar efter att kunderna ska få en upplevelse när de handlar hos oss. Just nu arbetar vi för etablera vårt varumärke runt om i Sverige, i dagsläget har vi 12 butiker.
     .arrow-holder
-      %a.arrow.white{href: "#storeselect", navigate: "#storeselect"}
-  %section.storeselect#storeselect.mh100
+      %a.arrow.white{href: "#stores", navigate: "#stores"}
+  %section.stores#stores.mh100
     .container
       .first
         %h2 Hitta din Art.Zen butik för kontaktinformation och öppettider
         .storesearch#storesearch
           %span Sök:
-          %input.typeahead{placeholder: "Fyll i landskap eller butik", type: "text"}
+          %input.typeahead{placeholder: "Sök på butiksnamn", type: "text"}
       .second
-        / #the-basics
-        /   %input.typeahead{placeholder: "States of USA", type: "text"}
         %img{src: "/img/map.png"}
 
 
@@ -120,18 +116,270 @@ body_class: index
 #1.popwrap.hide
   .popup
     .popinner
+      / %span.close Stäng
       .text
-        %img.logo{src: "/img/logo-white.svg"}
-          %span Arti.Zen Test
-      .map{data: {lat: "", lng: "", address: "Smalagränd 5", city: "Stockholm", zip: "11139"}}
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Eurostop
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Prästvägen 1
+          %span 30263 Halmstad
+          %span halmstad@artizen.se
+          %span 035 - 184420
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 19.00
+          %span Tis: 10.00 - 19.00
+          %span Ons: 10.00 - 19.00
+          %span Tor: 10.00 - 19.00
+          %span Fre: 10.00 - 19.00
+          %span Lör: 10.00 - 17.00
+          %span Sön: 11.00 - 18.00
+          / %span Sön: Stängt
+      .map{data: {lat: "", lng: "", address: "Prästvägen 1", city: "Halmstad", zip: "30263"}}
 #2.popwrap.hide
   .popup
     .popinner
+      / %span.close Stäng
       .text
-        %img.logo{src: "/img/logo-white.svg"}
-          %span Arti.Zen Ikano
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Gränden
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Nygatan 22
+          %span 582 19 Linköping
+          %span granden@artizen.se
+          %span 013 - 100868
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 19.00
+          %span Tis: 10.00 - 19.00
+          %span Ons: 10.00 - 19.00
+          %span Tor: 10.00 - 19.00
+          %span Fre: 10.00 - 19.00
+          %span Lör: 12.00 - 16.00
+          %span Sön: 12.00 - 16.00
+          / %span Sön: Stängt
+      .map{data: {lat: "", lng: "", address: "Nygatan 22", city: "Linköping", zip: "58219"}}
+#3.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Helsingborg
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Kullagatan 12
+          %span 252 20 helsingborg
+          %span helsingborg.city@artizen.se
+          %span 042 - 131 488
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 19.00
+          %span Tis: 10.00 - 19.00
+          %span Ons: 10.00 - 19.00
+          %span Tor: 10.00 - 19.00
+          %span Fre: 10.00 - 19.00
+          %span Lör: 10.00 - 16.00
+          %span Sön: 12.00 - 16.00
+          / %span Sön: Stängt
+      .map{data: {lat: "", lng: "", address: "Kullagatan 12", city: "helsingborg", zip: "25220"}}
+#4.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Huddinge
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Kommunalvägen 8
+          %span 141 47 Huddinge
+          %span huddinge@artizen.se
+          %span 08 - 774 91 10
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 19.00
+          %span Tis: 10.00 - 19.00
+          %span Ons: 10.00 - 19.00
+          %span Tor: 10.00 - 19.00
+          %span Fre: 10.00 - 19.00
+          %span Lör: 10.00 - 16.00
+          %span Sön: 11.00 - 16.00
+      .map{data: {lat: "", lng: "", address: "Kommunalvägen 8", city: "Huddinge", zip: "14147"}}
+#5.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Ikano
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Västra Svedengatan 7D
+          %span 581 28 Linköping
+          %span ikano.linkoping@artizen.se
+          %span 013 - 239070
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 20.00
+          %span Tis: 10.00 - 20.00
+          %span Ons: 10.00 - 20.00
+          %span Tor: 10.00 - 20.00
+          %span Fre: 10.00 - 20.00
+          %span Lör: 10.00 - 20.00
+          %span Sön: 10.00 - 20.00
       .map{data: {lat: "", lng: "", address: "Västra Svedengatan 7D", city: "Linköping", zip: "58128"}}
-
+#6.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Jönköping
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Kompanigaan 1
+          %span 553 05 Jönköping
+          %span jonkoping@artizen.se
+          %span 036 - 351 986
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 20.00
+          %span Tis: 10.00 - 20.00
+          %span Ons: 10.00 - 20.00
+          %span Tor: 10.00 - 20.00
+          %span Fre: 10.00 - 20.00
+          %span Lör: 10.00 - 18.00
+          %span Lör: 11.00 - 17.00
+      .map{data: {lat: "", lng: "", address: "Kompanigaan 1", city: "Jönköping", zip: "55305"}}
+#7.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Norrköping
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Drottninggatan 58
+          %span 602 32 Norrköping
+          %span norrkoping@artizen.se
+          %span 011 - 3004470
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 18.00
+          %span Tis: 10.00 - 18.00
+          %span Ons: 10.00 - 18.00
+          %span Tor: 10.00 - 18.00
+          %span Fre: 10.00 - 18.00
+          %span Lör: 10.00 - 15.00
+          / %span Sön: Stängt
+      .map{data: {lat: "", lng: "", address: "Smalagränd 5", city: "Stockholm", zip: "11139"}}
+#8.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Stenungsund
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span CW Borgsväg 2
+          %span 444 31 Stenungsund
+          %span stenungsund@artizen.se
+          %span 0303 - 80 170
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 18.00
+          %span Tis: 10.00 - 18.00
+          %span Ons: 10.00 - 18.00
+          %span Tor: 10.00 - 18.00
+          %span Fre: 10.00 - 15.00
+          %span Lör: 10.00 - 15.00
+          %span Sön: Stängt
+      .map{data: {lat: "", lng: "", address: "CW Borgsväg 2", city: "Stenungsund", zip: "44431"}}
+#9.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Triangeln
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Södra Förstadsgatan 41
+          %span 211 43 Malmö
+          %span triangeln@artizen.se
+          %span 040 - 643 7222
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 20.00
+          %span Tis: 10.00 - 20.00
+          %span Ons: 10.00 - 20.00
+          %span Tor: 10.00 - 20.00
+          %span Fre: 10.00 - 20.00
+          %span Lör: 10.00 - 18.00
+          %span Sön: 10.00 - 18.00
+      .map{data: {lat: "", lng: "", address: "Södra Förstadsgatan 41", city: "Malmö", zip: "21143"}}
+#10.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen TunaPark
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Gunborg Nymansväg 2
+          %span 632 22 Eskilstuna
+          %span tunapark@artizen.se
+          %span 016 - 144 938
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 20.00
+          %span Tis: 10.00 - 20.00
+          %span Ons: 10.00 - 20.00
+          %span Tor: 10.00 - 20.00
+          %span Fre: 10.00 - 20.00
+          %span Lör: 10.00 - 18.00
+          %span Lör: 11.00 - 18.00
+      .map{data: {lat: "", lng: "", address: "Gunborg Nymansväg 2", city: "Eskilstuna", zip: "63222"}}
+#11.popwrap.hide
+  .popup
+    .popinner
+      / %span.close Stäng
+      .text
+        %img.logo{alt: "", src: "/img/logo-white.svg"}
+        %span Arti.Zen Väla
+        %p
+          %span Butikschef: Sven Svensson
+        %p
+          %span Marknadsvägen 9
+          %span 260 36 Ödåkra
+          %span vala@artizen.se
+          %span 042 - 203 435
+        %p
+          %span Öppettider
+          %span Mån: 10.00 - 20.00
+          %span Tis: 10.00 - 20.00
+          %span Ons: 10.00 - 20.00
+          %span Tor: 10.00 - 20.00
+          %span Fre: 10.00 - 20.00
+          %span Lör: 10.00 - 18.00
+          %span Lör: 10.00 - 18.00
+      .map{data: {lat: "", lng: "", address: "Marknadsvägen 9", city: "Ödåkra", zip: "26036"}}
 .sectionmarker
   %div.active
   %div

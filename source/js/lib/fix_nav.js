@@ -2,7 +2,7 @@ var fix_nav = function ()
 {
   var scrollamount, offset_top;
 
-  scrollamount = 350;
+  scrollamount = 250;
   offset_top = $('.section_holder').offset().top;
 
   if (-offset_top > scrollamount)
