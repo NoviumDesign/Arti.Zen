@@ -24,7 +24,7 @@ var flip_page = function (direction)
   accuracy = 150;
   percentage = 0.7
 
-  holder_offset = $('.section_holder').offset().top;
+  holder_offset = $('.section-holder').offset().top;
   sections = find_section();
 
   section_top = $(sections[0]);
@@ -64,14 +64,14 @@ var flip_page = function (direction)
     new_offset = holder_offset - to_scroll;
 
 
-    if (new_offset < $(window).height() - $('.section_holder').height())
+    if (new_offset < $(window).height() - $('.section-holder').height())
     {
       // exceeds area of content
       // set to max instead
-      new_offset = $(window).height() - $('.section_holder').height();
+      new_offset = $(window).height() - $('.section-holder').height();
     }
 
-    $('.section_holder').css('marginTop', new_offset + 'px');
+    $('.section-holder').css('marginTop', new_offset + 'px');
   }
   else if (direction > 0)
   {
@@ -102,7 +102,8 @@ var flip_page = function (direction)
       new_offset = 0;
     }
 
-    $('.section_holder').css('marginTop', new_offset + 'px');
+    $('.section-holder').css('marginTop', new_offset + 'px');
   }
+
 }
 flip_page.busy = 0;

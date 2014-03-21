@@ -1,27 +1,89 @@
-var navigate = function (nav_to)
+Navigate = function (sectionsClass)
 {
-  var section, offset;
+  var
+    sectionHolder = $('.section-holder'),
+    that = this;
 
-  if (flip_page.busy)
+  this.to = function (htmlId)
   {
-    return false;
+    var section = sectionsClass.findSection(htmlId);
+
+    sectionsClass.setSection(section);
   }
-  flip_page.busy = 1;
 
-  section = $('section' + nav_to + ', .section' + nav_to).first();
-
-  offset = $('.section_holder').offset().top - section.offset().top;
-
-  $('.section_holder').css('marginTop', offset + 'px');
-
-  setTimeout(function ()
+  this.changeHash = function (hash)
   {
-    // functions
-    fix_nav();
-    body_id();
+    var
+      section,
+      triggerElement;
 
-    window.location.hash = nav_to;
-    flip_page.busy = 0;
+    if (hash.length > 0)
+    {
+      section = sectionsClass.findSection(hash);
 
-  }, anim);
+      if (section) {
+        // fires with click and hashchange
+
+        // remove id
+        section.attr('id', '');
+
+        // create fake element with the removen id
+        triggerElement = $('<div></div>')
+          .css({
+              position: 'absolute',
+              visibility: 'hidden',
+              top: '0px'
+          })
+          .attr('id', hash)
+          .appendTo(document.body);
+
+        // reload hash
+        window.location.hash = '';
+        window.location.hash = hash;
+
+        // reset as before
+        setTimeout(function ()
+        {
+          triggerElement.remove();
+          section.attr('id', hash);
+
+          that.to(hash);
+        }, 0);
+
+      }
+    }
+  }
+
+
+  $('a').click(function (event)
+  {
+    var
+      href = $(this).attr('href'),
+      hash = href.replace(/^#/, ''); 
+
+    if (href.substring(0, 1) == '#')
+    {
+      // is #-link
+      event.preventDefault();
+
+      that.changeHash(hash);
+    }
+  });
+
+  $('document').ready(function ()
+  {
+    // load page
+    var hash = window.location.hash.substring(1);
+
+    that.changeHash(hash);
+  });
+
+  $(window).on('hashchange', function ()
+  {
+    // change hash
+    var hash = window.location.hash.substring(1);
+    
+    that.changeHash(hash);
+  });
+
 }

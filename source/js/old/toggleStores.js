@@ -1,4 +1,4 @@
-var toggle_store = function (id)
+var toggleStore = function (id)
 {
   $(".popwrap#" + id).toggleClass( "hide" );
 

@@ -2,7 +2,7 @@ var find_section = function ()
 {
   var sections, section_bottom, section_top;
 
-  sections = $('.section_holder > section, .section_holder > .section');
+  sections = $('.section-holder > section, .section-holder > .section');
 
   sections.each(function (i, val)
   {

@@ -2,8 +2,8 @@
 title: Arti.Zen
 body_class: index
 ---
-.section_holder
-  %section.intro.h100
+.section-holder
+  %section.intro.h100#intro
     %header
       .container
         .logowrapper
@@ -16,9 +16,9 @@ body_class: index
               %a#menu-toggle Meny
           %ul.main-menu
             %li
-              %a{href: "#concept", navigate: "#concept"} Vår vison
+              %a{href: "#concept"} Vår vison
             %li
-              %a{href: "#stores", navigate: "#stores"} Butiker & öppettider
+              %a{href: "#stores"} Butiker & öppettider
             %li
               %a{href: "//www.facebook.com/Arti.Zen.se", target: "_blank"}
                 %img{src: "/img/fb-logo.svg"}
@@ -26,14 +26,15 @@ body_class: index
               %a{href: "//instagram.com/artizen_sverige", target: "_blank"}
                 %img{src: "/img/insta-logo.svg"} 
     .arrow-holder
-      %a.arrow{href: "#concept", navigate: "#concept"}
+      %a.arrow{href: "#concept"}
 
   %section.concept#concept.h100
-    .textholder.hp100
+    .textholder
       %p
         Arti.Zen är en butik där du hittar en ramverkstad, ett brett utbud av ramar, tavlor kort och presenter. Arti.Zens styrka ligger i att vi har lång erfarenhet inom branschen och är väldigt duktiga på kvalitetsinramning. Därav namnet Arti.Zen där Arti kommer från ordet Artisan som betyder skicklig och stolt hantverkare med lång erfarenhet inom sitt område samt en som alltid strävar efter att bli bättre. Zen är ett Japanskt ord som betyder känsla, vi strävar efter att kunderna ska få en upplevelse när de handlar hos oss. Just nu arbetar vi för etablera vårt varumärke runt om i Sverige, i dagsläget har vi 12 butiker.
     .arrow-holder
-      %a.arrow.white{href: "#stores", navigate: "#stores"}
+      %a.arrow.white{href: "#stores"}
+
   %section.stores#stores.mh100
     .container
       .first
@@ -103,7 +104,7 @@ body_class: index
   /           %img{src: "/img/logo-white.svg"}
   /           %p ArtiZen Huddinge
 
-  %section.footer
+  %section.footer#footer
     %footer
       %p
         %ul
