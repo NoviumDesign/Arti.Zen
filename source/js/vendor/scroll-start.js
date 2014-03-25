@@ -52,6 +52,7 @@ var gatherData = function (timeStamp, dl)
     // reset for next run
     gatherData.t = [];
     gatherData.dl = [];
+    gatherData.analyzed = true;
 
   }
 
@@ -60,6 +61,11 @@ var gatherData = function (timeStamp, dl)
   gatherData.timer = setTimeout(function ()
   {
     // new scroll
+
+    // if ( ! gatherData.analyzed)
+    // {
+    //   // small amount of data generated, may be none inertia scrolling
+    // }
 
     // reset data
     gatherData.t0 = 0;
@@ -77,6 +83,7 @@ gatherData.t = [];
 gatherData.dl = [];
 gatherData.current = 0;
 gatherData.timer = 0;
+gatherData.analyzed = false;
 
 var analyzeData = function (t, dl)
 {
