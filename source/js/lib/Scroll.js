@@ -137,16 +137,11 @@ var Scroll = function (sectionsClass)
     }
   });
 
-  $(window).on('mousewheel', function (event)
+  $(window).on('slide', function (event, data)
   {
-    var result = gatherData(event.timeStamp, event.deltaY);
-
-    event.preventDefault();
-
-    // up or down
-    if (result !== 0)
+    if (data.type == 'y' && data.direction !== 0)
     {
-      that.scroll(result);
+      that.scroll(data.direction);
     } 
   });
 }

@@ -59,9 +59,9 @@ Navigate = function (sectionsClass)
   {
     var
       href = $(this).attr('href'),
-      hash = href.replace(/^#/, ''); 
+      hash = href ? href.replace(/^#/, '') : false;
 
-    if (href.substring(0, 1) == '#')
+    if (href && href.substring(0, 1) == '#')
     {
       // is #-link
       event.preventDefault();

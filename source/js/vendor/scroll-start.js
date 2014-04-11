@@ -1,11 +1,15 @@
 var gatherData = function (timeStamp, dl)
 {
-  var i, maxPause, dataPerAnalysis, result, direction;
+  var
+    maxPause = 100,
+    dataPerAnalysis = 12,
+    direction = 0,
+    i = 0,
+    sum = 0,
+    sign,
+    result;
 
-  maxPause = 100;
-  dataPerAnalysis = 12;
-
-  // initioate scrolling
+  // initiate scrolling
   if (gatherData.t0 === 0)
   {
     gatherData.t0 = timeStamp;
@@ -15,38 +19,37 @@ var gatherData = function (timeStamp, dl)
   gatherData.t.push(timeStamp - gatherData.t0);
   gatherData.dl.push(dl);
 
-  direction = 0;
-
   // data gathering complete
   if (gatherData.t.length === dataPerAnalysis)
   {
     // analyze data
     results = analyzeData(gatherData.t, gatherData.dl);
 
-    for (i = 0; i < results.length; i++)
+    for (i; i < results.length; i++)
     {
 
       if (results[i] && gatherData.current === 0)
       {
-        if (results[i] > 0)
+
+        if (results[i] > 0 && gatherData.current === 0)
         {
           // scroll up
-          direction = 1;
+          direction = -1;
+          gatherData.current = -1;
         }
         else
         {
           // scroll down
-          direction = -1;
+          direction = 1;
+          gatherData.current = 1;
         }
 
-        gatherData.current = 1;
+        $(window).trigger('slide',  [{type: 'y', direction: direction}]);
       }
       else if (results[i] === 0)
       {
         gatherData.current = 0;
       }
-
-
     }
 
     // reset for next run
@@ -60,18 +63,30 @@ var gatherData = function (timeStamp, dl)
   clearTimeout(gatherData.timer);
   gatherData.timer = setTimeout(function ()
   {
-    // new scroll
 
-    // if ( ! gatherData.analyzed)
-    // {
-    //   // small amount of data generated, may be none inertia scrolling
-    // }
+    if (! gatherData.analyzed)
+    {
+      // small amount of data generated, may be none inertia scrolling
+
+      // sum
+      for (i in gatherData.dl)
+      {
+        sum += gatherData.dl[i];
+      }
+
+      // sign
+      sign = 2*(sum > 0) - 1;
+
+      $(window).trigger('slide',  [{type: 'y', direction: sign}]);
+
+    }
 
     // reset data
     gatherData.t0 = 0;
     gatherData.t = [];
     gatherData.dl = [];
     gatherData.current = 0; // 1 = accel, -1 = retard
+    gatherData.analyzed = false;
   }, maxPause);
 
   // return event
@@ -304,3 +319,10 @@ var leastSquare = function (t, dl)
 
   return [k, m];
 }
+
+$(window).on('mousewheel', function (event)
+{
+  gatherData(event.timeStamp, event.originalEvent.deltaY);
+
+  event.preventDefault();
+});
